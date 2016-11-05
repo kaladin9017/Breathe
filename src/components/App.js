@@ -1,12 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import DriveIn from 'react-drive-in';
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router';
 import $ from 'jquery';
-
-var imgStyle1 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-cfLUgx4Iku.jpg?v=1417688439976)"},
-  imgStyle2 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-AI2PpDVaKc.jpg?v=1417688493900)"},
-  imgStyle3 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-7EIjhZ98C7.jpg?v=1417688565555)"};
+require('../styles/style.css');
+// var imgStyle1 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-cfLUgx4Iku.jpg?v=1417688439976)"},
+//   imgStyle2 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-AI2PpDVaKc.jpg?v=1417688493900)"},
+//   imgStyle3 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-7EIjhZ98C7.jpg?v=1417688565555)"};
 
 const sound = [
           ['http://cdn.calm.com/scenes/scene-cfLUgx4Iku.m4a?v=1417688439566'],
@@ -75,19 +74,19 @@ export default class App extends Component {
             <div id="slide-picker" className="navbar navbar-default navbar-fixed-top">
               <Link to="/" className="sq">
                 <div onClick={this.selectVid.bind(this, 0)}>
-                  <div className="thumbnail img-responsive" style={imgStyle1}>
+                  <div className="thumbnail img-responsive thumb1">
                   </div>
                 </div>
               </Link>
               <Link to="deep" className="sq">
                 <div onClick={this.selectVid.bind(this, 1)}>
-                  <div className="thumbnail img-responsive" style={imgStyle2}>
+                  <div className="thumbnail img-responsive thumb2">
                   </div>
                 </div>
               </Link>
               <Link to="wave" className="sq">
                 <div onClick={this.selectVid.bind(this, 2)}>
-                  <div className="thumbnail img-responsive" style={imgStyle3}>
+                  <div className="thumbnail img-responsive thumb3">
                   </div>
                 </div>
               </Link>

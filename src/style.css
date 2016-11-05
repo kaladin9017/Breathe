@@ -29,15 +29,11 @@
   cursor: none;
 }
 
-.thumb1{
-  background-image: url("http://cdn.calm.com/images/scene-bg-cfLUgx4Iku.jpg?v=1417688439976");
-}
-.thumb2{
-  background-image: url("http://cdn.calm.com/images/scene-bg-AI2PpDVaKc.jpg?v=1417688493900");
-}
-.thumb3{
-  background-image: url("http://cdn.calm.com/images/scene-bg-7EIjhZ98C7.jpg?v=1417688565555");
-}
+/*#slide-picker:hover {
+  opacity: 1;
+  transition: 1s;
+}*/
+
 
 .thumbnail {
     width: 40px;

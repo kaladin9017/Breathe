@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-
 import App from './components/app';
 import Video from './components/Video';
 import Video2 from './components/Video2';
