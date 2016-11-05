@@ -43,16 +43,6 @@ export default class App extends Component {
     let temp = 0
     let path = this.props.location.pathname
     path == '/wave' ? temp = 2: path == '/deep' ? temp = 1 : temp = 0 ;
-    $.ajax( {
-      url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
-      success: function(data) {
-        var post = data.shift(); // The data is an array of posts. Grab the first one.
-        post.content = post.content.slice(3)
-        post.content = post.content.slice(0, post.content.length-6)
-        that.setState({content: post.content, title: post.title, current: temp})
-      },
-      cache: false
-    });
 
   }
 
@@ -64,8 +54,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-          <div id="main" className="navbar navbar-default navbar-fixed-top">
-            <div id="slide-picker" >
+          <div id="main">
+            <div id="slide-picker" className="navbar navbar-default navbar-fixed-top">
               <Link to="/">
                 <div onClick={this.selectVid.bind(this, 0)}>
                   <div className="thumbnail img-responsive thumb1">
@@ -85,7 +75,7 @@ export default class App extends Component {
                 </div>
               </Link>
             </div>
-            <div className="poem">
+            <div className="poem navbar navbar-default navbar-fixed-bottom">
               <p className="author">
                 {this.state.content}
                 <br/>
@@ -109,5 +99,16 @@ export default class App extends Component {
   }
   componentDidMount () {
     setTimeout(this.fade,4000);
+    let that = this;
+    $.ajax( {
+      url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+      success: function(data) {
+        var post = data.shift(); // The data is an array of posts. Grab the first one.
+        post.content = post.content.slice(3)
+        post.content = post.content.slice(0, post.content.length-6)
+        that.setState({content: post.content, title: post.title})
+      },
+      cache: false
+    });
   }
 }
