@@ -17,7 +17,7 @@ export default class App extends Component {
   constructor(props){
     super(props)
 
-    this.state={current: null, content: null, title: null, animating: true}
+    this.state={current: 0, content: null, title: null, animating: true}
 
   }
   fade () {
