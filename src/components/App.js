@@ -70,28 +70,28 @@ export default class App extends Component {
   render() {
     return (
       <div>
-          <div id="main" onMouseEnter={this.fadeIn.bind(this)} onMouseLeave={this.fadeOut.bind(this)}>
-            <div id="slide-picker" className="navbar navbar-default navbar-fixed-top">
-              <Link to="/" className="sq">
+          <div id="main" className="navbar navbar-default navbar-fixed-top">
+            <div id="slide-picker" >
+              <Link to="/">
                 <div onClick={this.selectVid.bind(this, 0)}>
                   <div className="thumbnail img-responsive thumb1">
                   </div>
                 </div>
               </Link>
-              <Link to="deep" className="sq">
+              <Link to="deep">
                 <div onClick={this.selectVid.bind(this, 1)}>
                   <div className="thumbnail img-responsive thumb2">
                   </div>
                 </div>
               </Link>
-              <Link to="wave" className="sq">
+              <Link to="wave">
                 <div onClick={this.selectVid.bind(this, 2)}>
                   <div className="thumbnail img-responsive thumb3">
                   </div>
                 </div>
               </Link>
             </div>
-            <div className="poem navbar navbar-default navbar-fixed-bottom">
+            <div className="poem">
               <p className="author">
                 {this.state.content}
                 <br/>
