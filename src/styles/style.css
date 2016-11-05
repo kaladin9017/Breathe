@@ -72,6 +72,15 @@
   font-size: 1em;
 }
 
+.welcome {
+  display: flex;
+  align-self: flex-end;
+  font-size: 10px;
+}
+
+#wel {
+  font-size: 9px;
+}
 
 
 #background-video{

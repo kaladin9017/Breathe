@@ -22,6 +22,7 @@ export default class App extends Component {
   }
   fade () {
     $("#main").addClass("hidden");
+    $("#wel").hide();
 
   }
 
@@ -75,6 +76,14 @@ export default class App extends Component {
                 </div>
               </Link>
             </div>
+
+            <div className="welcome">
+              <p id="wel">
+                Welcome.
+                A place to breathe and relax.
+              </p>
+            </div>
+
             <div className="poem navbar navbar-default navbar-fixed-bottom">
               <p className="author">
                 {this.state.content}
