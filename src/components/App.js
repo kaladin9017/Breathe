@@ -48,7 +48,7 @@ export default class App extends Component {
     var that = this
     let temp = 0
     let path = this.props.location.pathname
-    path == '/' ? temp = 0: path == '/deep' ? temp = 1 : temp = 2 ;
+    path == '/wave' ? temp = 2: path == '/deep' ? temp = 1 : temp = 0 ;
     $.ajax( {
       url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
       success: function(data) {
