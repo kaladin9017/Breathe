@@ -1,7 +1,7 @@
 {
-  "name": "redux-catbook",
+  "name": "Breathe",
   "version": "1.0.0",
-  "description": "simple Redux sample app",
+  "description": "breathing",
   "main": "index.js",
   "scripts": {
     "test": "test",
@@ -9,18 +9,34 @@
     "start": "npm-run-all --parallel open:src lint:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "clean-public": "npm run remove-public && mkdir public",
+    "remove-public": "node_modules/.bin/rimraf ./public",
+    "build:html": "babel-node tools/buildHtml.js",
+    "prebuild": "npm-run-all clean-public lint build:html",
+    "build": "babel-node tools/build.js",
+    "postbuild": "babel-node tools/publicServer.js"
   },
   "dependencies": {
+    "babel-cli": "6.8.0",
+    "babel-polyfill": "6.8.0",
+    "babel-preset-es2015": "6.6.0",
+    "babel-preset-react": "6.5.0",
     "bootstrap": "^3.3.7",
-    "react": "^15.3.1",
-    "react-favicon": "0.0.4",
+    "cheerio": "^0.20.0",
+    "colors": "1.1.2",
+    "compression": "^1.6.1",
+    "express": "4.13.4",
+    "jquery": "^3.1.1",
+    "open": "0.0.5",
+    "react": "^0.14.8",
+    "react-dom": "^15.3.2",
+    "react-drive-in": "^1.7.3",
+    "react-player": "^0.12.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.7.0",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.1.0",
-    "serve-favicon": "^2.3.0",
-    "toastr": "^2.1.2"
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "6.8.0",
@@ -35,7 +51,7 @@
     "colors": "1.1.2",
     "compression": "^1.6.1",
     "cross-env": "1.0.7",
-    "css-loader": "0.23.1",
+    "css-loader": "^0.23.1",
     "enzyme": "2.2.0",
     "eslint": "2.9.0",
     "eslint-plugin-import": "1.6.1",
@@ -55,12 +71,12 @@
     "redux-immutable-state-invariant": "1.2.3",
     "redux-mock-store": "1.0.2",
     "rimraf": "2.5.2",
-    "style-loader": "0.13.1",
+    "style-loader": "^0.13.1",
     "url-loader": "0.5.7",
     "webpack": "1.13.0",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.10.0"
   },
-  "author": "sophie debenedetto",
-  "license": "ISC"
+  "author": "Christopher Sancho",
+  "license": "MIT"
 }
