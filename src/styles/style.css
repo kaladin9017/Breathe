@@ -10,8 +10,6 @@
   position: absolute;
   z-index: 1;
   text-align: center;
-  opacity: 0;
-  transition: 2.5s;
 }
 
 #main:hover {
@@ -60,6 +58,12 @@
   font-weight: 300;
   font-size: 8px;
 
+}
+
+
+.hidden {
+  opacity: 0;
+  transition: 2.5s;
 }
 
 .author {

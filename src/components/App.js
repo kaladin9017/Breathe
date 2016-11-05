@@ -21,13 +21,7 @@ export default class App extends Component {
 
   }
   fade () {
-    // $("#main").animate({
-    //     opacity: 1
-    //   },1000, function () {
-    //     setTimeout(function () {
-    //       $("#main").animate({opacity:0})
-    //     },2000)
-    //   })
+    $("#main").addClass("hidden");
 
   }
 
@@ -114,6 +108,6 @@ export default class App extends Component {
     );
   }
   componentDidMount () {
-    this.fade()
+    setTimeout(this.fade,4000);
   }
 }
