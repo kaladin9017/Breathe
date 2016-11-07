@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DriveIn from 'react-drive-in';
-import ReactPlayer from 'react-player';
 
 const PLAYLIST = [
                   "http://cdn.calm.com/scenes/scene-cfLUgx4Iku.mp4?v=1417688439976"

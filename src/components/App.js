@@ -3,9 +3,6 @@ import ReactPlayer from 'react-player';
 import { Link } from 'react-router';
 import $ from 'jquery';
 require('../styles/style.css');
-// var imgStyle1 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-cfLUgx4Iku.jpg?v=1417688439976)"},
-//   imgStyle2 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-AI2PpDVaKc.jpg?v=1417688493900)"},
-//   imgStyle3 = {backgroundImage: "url(http://cdn.calm.com/images/scene-bg-7EIjhZ98C7.jpg?v=1417688565555)"};
 
 const sound = [
           ['http://cdn.calm.com/scenes/scene-cfLUgx4Iku.m4a?v=1417688439566'],
@@ -24,19 +21,6 @@ export default class App extends Component {
     $("#main").addClass("hidden");
     $("#wel").hide();
 
-  }
-
-  fadeIn () {
-    // $("#main").animate({
-    //     opacity: 1
-    //   },1000, function() {
-    //     setTimeout(function(){
-    //     },3000)
-    //   })
-  }
-
-  fadeOut () {
-        // $("#main").animate({opacity:0},2000)
   }
 
   componentWillMount () {
